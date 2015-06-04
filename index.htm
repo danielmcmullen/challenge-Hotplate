@@ -1,0 +1,50 @@
+<html>
+<style media="screen">
+.tempCell{
+  width:40px;
+  float: left;
+  padding: 5px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:clip;
+}
+.row .tempCell:last-of-type {
+  padding-right: 0;
+}
+
+#hotplate{
+  margin:5px;
+}
+
+.row:after {
+    /* Or @extend clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .veryCold{
+    background-color: black;
+  }
+  .cold{
+    background-color: purple;
+  }
+  .average{
+    background-color: blue;
+  }
+  .warm{
+    background-color: yellow;
+  }
+  .hot{
+    background-color: orange;
+  }
+  .veryHot{
+    background-color: red;
+  }
+</style>
+<input type="text" id="userInput"></input>
+<button onclick="hotplate.getValueAndRun()" >Run Simulation</button>
+<div id="hotplate">
+</div>
+<script type="text/javascript" src="hotplate.js">
+</script>
+</html>
